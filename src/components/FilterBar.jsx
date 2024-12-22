@@ -1,6 +1,7 @@
 import React from "react";
 
-const FilterBar = ({ platformFilter, setPlatformFilter, searchQuery, setSearchQuery }) => (
+function FilterBar  ({ platformFilter, setPlatformFilter, searchQuery, setSearchQuery }) {
+  return (
   <div className="flex flex-wrap justify-center gap-4 mb-6">
     <select
       className="border rounded p-2"
@@ -26,6 +27,6 @@ const FilterBar = ({ platformFilter, setPlatformFilter, searchQuery, setSearchQu
       onChange={(e) => setSearchQuery(e.target.value.toLowerCase())}
     />
   </div>
-);
+)};
 
 export default FilterBar;
