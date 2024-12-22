@@ -4,7 +4,7 @@ import FilterBar from "./components/FilterBar";
 import GameList from "./components/GameList";
 
 
-const App = () => {
+function App () {
   const [games, setGames] = useState([]);
   const [platformFilter, setPlatformFilter] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
@@ -16,7 +16,7 @@ const App = () => {
         const data = await response.json();
         setGames(data);
       } catch (error) {
-        console.error("Error fetching game data:", error);
+        alert("Error fetching game data:", error);
       }
     };
 
